@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(27, 27, 27);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+body p{
+    font-family: 'Playfair Display', serif;
+    color: #232323;
+    font-size: 24px;
+    display: flex;
+    position: absolute;
+    top: 90px;
+}
+
+.clock{
+    position: relative;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background-color: #fff;
+    border: 10px solid #c7c7c7;
+    box-shadow: inset 5px 2px 15px 5px #232323;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #2f363e;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    
+}
+
+.clock span{
+    position: absolute;
+    inset: 10px;
+    color: #232323;
+    text-align: center;
+    transform: rotate(calc(6deg * var(--i)));
+}
+
+.clock span:nth-of-type(5n){
+    font-weight: 900;
+    font-size: 30px;
+    inset: 0px;
+}
+
+.clock .hour,
+.clock .minutes,
+.clock .seconds{
+    position: absolute;
+    transform: rotateZ(180deg);
+}
+
+.hr, .min, .sec{
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100px;
+    background: #232323;
+    border-radius: 3px;
+    z-index: 10;
+    box-shadow: 0px 0px 3px #232323;
+}
+
+.min::before{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 140px;
+    background: #232323;
+    border-radius: 3px;
+    z-index: 10;
+    box-shadow: 0px 3px 4px #232323;
+}
+
+.sec::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 180px;
+    background: red;
+    border-radius: 3px;
+    z-index: 10;
+    box-shadow: 0px 3px 4px #232323;
+}
+
+footer{
+    bottom: 20px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding-bottom: 20px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+}
+
+footer div i{
+    text-align: center;
+    font-size: 20px;
+    margin-right: 8px;
+}
